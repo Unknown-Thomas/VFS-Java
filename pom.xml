@@ -6,7 +6,40 @@
 
     <groupId>VFS</groupId>
     <artifactId>VFS-Parent</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>VFS-Server</module>
+        <module>VFS-Client</module>
+        <module>AcceptanceTests</module>
+    </modules>
 
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <configuration>
+                        <descriptorRefs>
+                            <descriptorRef>jar-with-dependencies</descriptorRef>
+                        </descriptorRefs>
+                        <appendAssemblyId>false</appendAssemblyId>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>jar-with-dependencies</id>
+                            <!-- this is used for inheritance merges -->
+                            <phase>package</phase>
+                            <!-- bind to the packaging phase -->
+                            <goals>
+                                <goal>single</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
 </project>

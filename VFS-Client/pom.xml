@@ -19,7 +19,7 @@
                     <finalName>VFS-Client</finalName>
                     <archive>
                         <manifest>
-                            <mainClass>com.github.UnknownThomas.VFSJava.client.Application</mainClass>
+                            <mainClass>com.github.UnknownThomas.VFSJava.client.CommandLineDialog</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

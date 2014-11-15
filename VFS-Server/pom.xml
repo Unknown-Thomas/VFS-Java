@@ -19,12 +19,25 @@
                     <finalName>VFS-Server</finalName>
                     <archive>
                         <manifest>
-                            <mainClass>com.github.UnknownThomas.VFSJava.server.Application</mainClass>
+                            <mainClass>com.github.UnknownThomas.VFSJava.server.Server</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>0.9.27</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
